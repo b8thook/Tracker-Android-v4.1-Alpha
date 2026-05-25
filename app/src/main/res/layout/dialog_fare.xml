@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fareDialogRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#1A2B21"
+    android:paddingStart="24dp"
+    android:paddingEnd="24dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="24dp"
+    android:elevation="24dp">
+
+    <!-- Drag handle — tap and drag to reposition -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="4dp"
+            android:background="#3D6B52" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="drag to move"
+            android:textColor="#3D6B52"
+            android:textSize="10sp"
+            android:paddingTop="3dp" />
+    </LinearLayout>
+
+    <!-- Trip summary -->
+    <TextView
+        android:id="@+id/tvSummary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#8BAF97"
+        android:textSize="13sp"
+        android:paddingBottom="16dp" />
+
+    <!-- Fare label -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FARE"
+        android:textColor="#8BAF97"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.08"
+        android:paddingBottom="6dp" />
+
+    <!-- Fare input row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#0F2419"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:layout_marginBottom="14dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="S$"
+            android:textColor="#16A34A"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingEnd="10dp" />
+
+        <EditText
+            android:id="@+id/etFare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="0.00"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:textColor="#F1F5F2"
+            android:textColorHint="#3D6B52"
+            android:textAlignment="center"
+            android:background="@null"
+            android:padding="12dp" />
+    </LinearLayout>
+
+    <!-- Tip label -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TIP  (optional)"
+        android:textColor="#8BAF97"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.08"
+        android:paddingBottom="6dp" />
+
+    <!-- Tip input row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#0F2419"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="S$"
+            android:textColor="#16A34A"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingEnd="10dp" />
+
+        <EditText
+            android:id="@+id/etTip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="0.00"
+            android:textSize="22sp"
+            android:textColor="#F1F5F2"
+            android:textColorHint="#3D6B52"
+            android:textAlignment="center"
+            android:background="@null"
+            android:padding="10dp" />
+    </LinearLayout>
+
+    <!-- Save button -->
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="Save Trip"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:background="#1B5E3B"
+        android:stateListAnimator="@null"
+        android:layout_marginBottom="10dp" />
+
+    <!-- Skip button -->
+    <Button
+        android:id="@+id/btnSkip"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:text="Skip — add fare later"
+        android:textColor="#8BAF97"
+        android:textSize="13sp"
+        android:background="#0F2419"
+        android:stateListAnimator="@null" />
+
+</LinearLayout>

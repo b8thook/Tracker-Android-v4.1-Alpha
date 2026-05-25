@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<co.neatfolk.triptracker.DraggableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pillRoot"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@drawable/bg_pill_overlay"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp"
+    android:paddingBottom="10dp"
+    android:elevation="20dp"
+    android:minWidth="64dp">
+
+    <!-- Grip handle -->
+    <LinearLayout
+        android:id="@+id/gripHandle"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="6dp"
+        android:paddingBottom="4dp">
+
+        <View
+            android:layout_width="24dp"
+            android:layout_height="2dp"
+            android:background="#4A7A5A"
+            android:layout_marginBottom="3dp" />
+        <View
+            android:layout_width="18dp"
+            android:layout_height="2dp"
+            android:background="#4A7A5A"
+            android:layout_marginBottom="3dp" />
+        <View
+            android:layout_width="24dp"
+            android:layout_height="2dp"
+            android:background="#4A7A5A" />
+    </LinearLayout>
+
+    <!-- Collapsed bar -->
+    <TextView
+        android:id="@+id/tvCollapsedBar"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:gravity="center"
+        android:textColor="#F1F5F9"
+        android:textSize="10sp"
+        android:text="0:00 · 0.00 ⌄"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone" />
+
+    <!-- Main action button -->
+    <Button
+        android:id="@+id/btnAction"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/bg_circle_green"
+        android:text="▶"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:padding="0dp"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:stateListAnimator="@null"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginTop="2dp" />
+
+    <!-- Timer + distance -->
+    <LinearLayout
+        android:id="@+id/statsContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingTop="6dp"
+        android:paddingBottom="4dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0:00"
+            android:textColor="#F1F5F9"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvDist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.00"
+            android:textColor="#94A3B8"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <!-- Mid-trip action buttons -->
+    <LinearLayout
+        android:id="@+id/midTripButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="2dp"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/btnPickedUp"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:text="↑ UP"
+            android:textColor="#FFFFFF"
+            android:textSize="9sp"
+            android:padding="0dp"
+            android:paddingStart="6dp"
+            android:paddingEnd="6dp"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:stateListAnimator="@null"
+            android:background="#B45309"
+            android:layout_marginEnd="4dp" />
+
+        <Button
+            android:id="@+id/btnAddStop"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:text="+ STOP"
+            android:textColor="#FFFFFF"
+            android:textSize="9sp"
+            android:padding="0dp"
+            android:paddingStart="6dp"
+            android:paddingEnd="6dp"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:stateListAnimator="@null"
+            android:background="#1D4ED8"
+            android:layout_marginEnd="4dp" />
+
+        <Button
+            android:id="@+id/btnDestChange"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:text="⤳ DEST"
+            android:textColor="#FFFFFF"
+            android:textSize="9sp"
+            android:padding="0dp"
+            android:paddingStart="6dp"
+            android:paddingEnd="6dp"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:stateListAnimator="@null"
+            android:background="#6D28D9" />
+
+    </LinearLayout>
+
+    <!-- v4.0-alpha fix: SwipeBar widened from 56dp to 160dp to prevent accidental cancel -->
+    <co.neatfolk.triptracker.SwipeBar
+        android:id="@+id/swipeBar"
+        android:layout_width="160dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="4dp"
+        android:visibility="gone" />
+
+</co.neatfolk.triptracker.DraggableLayout>

@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#1A2B21">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#1A2B21"
+    android:paddingStart="24dp"
+    android:paddingEnd="24dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="16dp">
+
+    <!-- Fare row -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FARE (S$)"
+        android:textColor="#8BAF97"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.06"
+        android:paddingBottom="4dp" />
+    <EditText
+        android:id="@+id/etEditFare"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:inputType="numberDecimal"
+        android:hint="0.00"
+        android:textSize="16sp"
+        android:textColor="#F1F5F2"
+        android:textColorHint="#3D6B52"
+        android:background="#0F2419"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:layout_marginBottom="14dp" />
+
+    <!-- Tip row -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TIP (S$)"
+        android:textColor="#8BAF97"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.06"
+        android:paddingBottom="4dp" />
+    <EditText
+        android:id="@+id/etEditTip"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:inputType="numberDecimal"
+        android:hint="0.00"
+        android:textSize="16sp"
+        android:textColor="#F1F5F2"
+        android:textColorHint="#3D6B52"
+        android:background="#0F2419"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:layout_marginBottom="14dp" />
+
+    <!-- Start / End time row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="14dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginEnd="8dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="START TIME"
+                android:textColor="#8BAF97"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.06"
+                android:paddingBottom="4dp" />
+            <EditText
+                android:id="@+id/etEditStart"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:inputType="time"
+                android:hint="HH:MM"
+                android:textSize="15sp"
+                android:textColor="#F1F5F2"
+                android:textColorHint="#3D6B52"
+                android:background="#0F2419"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="8dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="END TIME"
+                android:textColor="#8BAF97"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.06"
+                android:paddingBottom="4dp" />
+            <EditText
+                android:id="@+id/etEditEnd"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:inputType="time"
+                android:hint="HH:MM"
+                android:textSize="15sp"
+                android:textColor="#F1F5F2"
+                android:textColorHint="#3D6B52"
+                android:background="#0F2419"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Pickup -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PICKUP"
+        android:textColor="#8BAF97"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.06"
+        android:paddingBottom="4dp" />
+    <EditText
+        android:id="@+id/etEditPickup"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:inputType="text"
+        android:hint="Pickup address"
+        android:textSize="14sp"
+        android:textColor="#F1F5F2"
+        android:textColorHint="#3D6B52"
+        android:background="#0F2419"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:layout_marginBottom="14dp" />
+
+    <!-- Dropoff -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DROP-OFF"
+        android:textColor="#8BAF97"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.06"
+        android:paddingBottom="4dp" />
+    <EditText
+        android:id="@+id/etEditDropoff"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:inputType="text"
+        android:hint="Drop-off address"
+        android:textSize="14sp"
+        android:textColor="#F1F5F2"
+        android:textColorHint="#3D6B52"
+        android:background="#0F2419"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:layout_marginBottom="14dp" />
+
+    <!-- Service type -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SERVICE TYPE"
+        android:textColor="#8BAF97"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.06"
+        android:paddingBottom="4dp" />
+    <Spinner
+        android:id="@+id/spinEditService"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#0F2419"
+        android:paddingStart="14dp"
+        android:layout_marginBottom="14dp" />
+
+    <!-- Payment -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PAYMENT"
+        android:textColor="#8BAF97"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.06"
+        android:paddingBottom="4dp" />
+    <Spinner
+        android:id="@+id/spinEditPayment"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#0F2419"
+        android:paddingStart="14dp"
+        android:layout_marginBottom="14dp" />
+
+    <!-- Notes -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NOTES"
+        android:textColor="#8BAF97"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.06"
+        android:paddingBottom="4dp" />
+    <EditText
+        android:id="@+id/etEditNotes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:hint="Optional notes"
+        android:textSize="14sp"
+        android:textColor="#F1F5F2"
+        android:textColorHint="#3D6B52"
+        android:background="#0F2419"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:minLines="2"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Save button -->
+    <Button
+        android:id="@+id/btnEditSave"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Save Changes"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:background="#1B5E3B"
+        android:stateListAnimator="@null"
+        android:layout_marginBottom="10dp" />
+
+    <!-- Delete button -->
+    <Button
+        android:id="@+id/btnEditDelete"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:text="Delete Trip"
+        android:textColor="#DC2626"
+        android:textSize="14sp"
+        android:background="#1A0A0A"
+        android:stateListAnimator="@null" />
+
+</LinearLayout>
+</ScrollView>

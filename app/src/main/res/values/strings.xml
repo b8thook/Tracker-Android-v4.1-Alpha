@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Trip Tracker</string>
+    <string name="start_trip">▶ START TRIP</string>
+    <string name="end_trip">■ END TRIP</string>
+    <string name="overlay_active">Overlay running</string>
+    <string name="ready">Ready</string>
+    <string name="accessibility_service_description">Trip Tracker reads pickup address, dropoff address, passenger name, fare, and payment method from the Grab Driver app. This data is stored locally on your device only. Trip Tracker cannot control Grab or any other app.</string>
+</resources>

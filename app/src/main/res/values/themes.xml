@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Light theme -->
+    <style name="Theme.TripTracker" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#1B5E3B</item>
+        <item name="colorPrimaryVariant">#2D6A4F</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSecondary">#16A34A</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+        <item name="android:statusBarColor">#1B5E3B</item>
+        <item name="android:navigationBarColor">#1B5E3B</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowBackground">@color/bg_main_light</item>
+    </style>
+
+    <!-- Dialog style — white background, legible green/grey button text -->
+    <style name="TripTracker.Dialog" parent="Theme.MaterialComponents.Light.Dialog.Alert">
+        <item name="colorPrimary">#1B5E3B</item>
+        <item name="colorAccent">#1B5E3B</item>
+        <item name="buttonBarPositiveButtonStyle">@style/TripTracker.Dialog.Button.Positive</item>
+        <item name="buttonBarNegativeButtonStyle">@style/TripTracker.Dialog.Button.Negative</item>
+        <item name="buttonBarNeutralButtonStyle">@style/TripTracker.Dialog.Button.Neutral</item>
+    </style>
+
+    <style name="TripTracker.Dialog.Button.Positive" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">#1B5E3B</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TripTracker.Dialog.Button.Negative" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">#6B7280</item>
+    </style>
+
+    <style name="TripTracker.Dialog.Button.Neutral" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">#6B7280</item>
+    </style>
+</resources>
